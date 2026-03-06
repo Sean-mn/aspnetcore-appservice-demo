@@ -9,7 +9,7 @@ namespace azurepractice.Controllers
     public class TodoController : ControllerBase
     {
         private readonly List<Todo> _todos = new();
-        private static int _nextId = 1;
+        private int _nextId = 1;
 
         [HttpGet]
         public IActionResult GetAll() 
