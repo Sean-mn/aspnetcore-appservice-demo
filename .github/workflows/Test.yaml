@@ -17,10 +17,10 @@ jobs:
           dotnet-version: '10.x'
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore azurepractice/azurepractice.sln
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build azurepractice/azurepractice.sln --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --configuration Release --no-build --verbosity normal
+        run: dotnet test azurepractice/azurepractice.sln --configuration Release --no-build --verbosity normal
